@@ -58,7 +58,7 @@ github: https://github.com/YTiOSer/YTAnimation
 基础动画根据 `keyPath` 来区分不同的动画,, 系统提供了多个类型,如: `transform.scale` (比例转换)、`transform.scale.x`、`transform.scale.y`、 `transform.rotation `(旋转) 、`transform.rotation.x`(绕x轴旋转)、`transform.rotation.y`(绕y轴旋转)、`transform.rotation.z`(绕z轴旋转)、`opacity` (透明度)、`margin`、`backgroundColor`(背景色)、`cornerRadius`(圆角)、`borderWidth`(边框宽)、`bounds`、`contents`、`contentsRect`、`cornerRadius`、`frame`、`hidden`、`mask`、`masksToBounds`、`shadowColor`(阴影色)、`shadowOffset`、`shadowOpacity`、`shadowOpacity`, 在使用时候, 需要根据具体的需求选择合适的.
 
 效果图如下:
-![旋转.gif](https://www.jianshu.com/p/f2def3da931f)
+![旋转.gif](https://github.com/YTiOSer/YTAnimation/blob/master/images/%E6%97%8B%E8%BD%AC.gif)
 
 
 - 位移动画
@@ -124,7 +124,7 @@ view_Body.layer.add(animation, forKey: "backgroundColorAnimation")
 - keyTimes：可以为对应的关键帧指定对应的时间点,其取值范围为0到1.0, `keyTimes` 中的每一个时间值都对应 `values` 中的每一帧.当 `keyTimes` 没有设置的时候,各个关键帧的时间是根据 `duration` 平分的。
 
 以抖动截图为例, 效果图如下:
-![抖动.gif](https://www.jianshu.com/p/f2def3da931f)
+![抖动.gif](https://github.com/YTiOSer/YTAnimation/blob/master/images/%E6%8A%96%E5%8A%A8.gif)
 
 
 
@@ -174,7 +174,7 @@ view_Body.layer.add(animation, forKey: "shakeAnimation")
 `CAAnimationGroup` 是 `CAAnimation` 的子类，可以保存一组动画对象，可以保存基础动画、关键帧动画等，数组中所有动画对象可以同时并发运行, 也可以通过实践设置为串行连续动画.
 
 效果截图如下:
-![组动画2.gif](https://www.jianshu.com/p/f2def3da931f)
+![组动画2.gif](https://github.com/YTiOSer/YTAnimation/blob/master/images/%E7%BB%84%E5%8A%A8%E7%94%BB2.gif)
 
 
 动画代码如下: 
@@ -254,7 +254,7 @@ view_Body.layer.add(animation_Rotate, forKey: "rotateAnimation")
 **注**:  因 `Apple` 不提供维护，并且有可能造成你的app审核不通过, 所以不建议开发者们使用这些私有API.
 
 效果如下:
-![过渡动画.gif](https://www.jianshu.com/p/f2def3da931f)
+![过渡动画.gif](https://github.com/YTiOSer/YTAnimation/blob/master/images/%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB.gif)
 
 翻页动画代码如下:
 ```
@@ -271,7 +271,7 @@ view_Body.layer.add(animation_Curl, forKey: "curlAnimation")
 #### 5. 项目案例
 1. 进度条
 效果如下:
-![进度条.gif](https://www.jianshu.com/p/f2def3da931f)
+![进度条.gif](https://github.com/YTiOSer/YTAnimation/blob/master/images/%E8%BF%9B%E5%BA%A6%E6%9D%A1.gif)
 这里主要用到了 `CAShapeLayer` + ` CAGradientLayer`, 使用 `CAGradientLayer` 画进度圈(GPU执行, 高效), 然后使用 `CAGradientLayer`  渐变色layer, 结合动画显示进度条.
 代码如下:
 - UI视图
@@ -369,15 +369,17 @@ num_Progress += 1
 - 点击红色按钮，红色按钮旋转。（**旋转动画**） 
 - 黑色小按钮依次弹出，并且带有旋转效果。（**位移动画、旋转动画、组动画**） 
 - 点击黑色小按钮，其他按钮消失，被点击的黑色按钮变大变淡消失。（**缩放动画、alpha动画、组动画**） 
-![tanqiu.gif](https://www.jianshu.com/p/f2def3da931f)
+![tanqiu.gif](https://github.com/YTiOSer/YTAnimation/blob/master/images/tanqiu.gif)
 
 
 3. 仿钉钉菜单效果
+
 ![dingding.png](https://upload-images.jianshu.io/upload_images/8283020-64acf2267a54e205.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 动画实现用到了位移动画和缩放动画, 其实不难.
 
 4. 点赞
-![点赞.gif](https://www.jianshu.com/p/f2def3da931f)
+![点赞.gif](https://github.com/YTiOSer/YTAnimation/blob/master/images/%E7%82%B9%E8%B5%9E.gif)
 
 ## 三、总结
 看完整篇文章相信你对  iOS` 中的动画有了一个详细的了解, 其实单个动画都是比较简单的, 而复杂的动画其实都是由一个个简单的动画组装而成的，所以遇到比较难得动画需求, 我们只要充分组装不同的动画，就能实现出满意的效果.
