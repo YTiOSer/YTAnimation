@@ -4,7 +4,6 @@
 > iOS 动画主要是指 `Core Animation` 框架, `Core Animation`是 `iOS` 和 `OS X` 平台上负责图形渲染与动画的基础框架。`Core Animation` 可以作用于动画视图或者其他可视元素，可以完成动画所需的大部分绘帧工作。`Core Animation` 系统已经进行了封装, 所以在使用的时候你只需要配置少量的动画参数（如开始点的位置和结束点的位置）即可使用 `Core Animation` 的多种动画效果。`Core Animation` 将大部分实际的绘图任务交给了图形硬件(**GPU**)来处理，图形硬件会加速图形渲染的速度。这种自动化的图形加速技术让动画拥有更高的帧率并且显示效果更加平滑，不会加重CPU的负担而影响程序的运行速度。
 
 本文主要总结下平时常用的动画, 如: 基础动画(`CABasicAnimation`)、关键帧动画(`CAKeyframeAnimation`)、组动画(`CAAnimationGroup`)、过渡动画(`CATransition`), 最后也扩展了下, 做了进度条、贝塞尔曲线画心❤️、弹球、钉钉效果、点赞等动画,希望对大家有所帮助.
-github: https://github.com/YTiOSer/YTAnimation
 
 ![Core Animation.jpeg](https://upload-images.jianshu.io/upload_images/8283020-093de79629cda42e.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -387,7 +386,7 @@ num_Progress += 1
 好记性不如烂笔头, 光说不练假把戏, 建议大家结合我的代码, 自己边看边练习, 这样才能记得牢, 才能转换成自己的知识. 
 
 github: https://github.com/YTiOSer/YTAnimation
-如果觉得对你还有些用，给一颗star吧。你的支持是我继续的动力。
+如果觉得对你还有些用，给一颗 **star** 吧。你的支持是我继续的动力。
 
 简书：https://www.jianshu.com/u/562ebc94345f 
 
