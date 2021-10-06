@@ -33,7 +33,7 @@ class YTBaseViewController: UIViewController {
 
 extension YTBaseViewController{
     
-    func playBtnClick(btn: UIButton) {
+    @objc func playBtnClick(btn: UIButton) {
         
     }
     

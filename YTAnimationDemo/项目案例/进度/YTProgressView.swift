@@ -58,7 +58,7 @@ extension YTProgressView {
         animation.duration = CFTimeInterval(Double(progress) * 0.01)
         animation.fromValue = NSNumber.init(value: 0)
         animation.toValue = NSNumber.init(value: Double(progress) * 0.01)
-        animation.fillMode = "forwards"
+        animation.fillMode = CAMediaTimingFillMode.init(rawValue: "forwards")
         animation.isRemovedOnCompletion = false //完成后不删除动画
         layer_MainPathLayer.add(animation, forKey: "strokeEndAnimation")
         
@@ -73,7 +73,7 @@ extension YTProgressView {
         
     }
     
-    func progressLabelTimerAction() {
+    @objc func progressLabelTimerAction() {
         
         DispatchQueue.main.async {
             self.label_Progress.text = String(self.num_Progress) + "%"
@@ -121,7 +121,7 @@ extension YTProgressView {
         //渐变色
         layer_Gradient = CAGradientLayer()
         layer_Gradient.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH)
-        layer_Gradient.type = "axial" //线性变化  默认目前只有这一个type
+        layer_Gradient.type = CAGradientLayerType.init(rawValue: "axial")  //线性变化  默认目前只有这一个type
         layer_Gradient.colors = [UIColor.init(hex: 0xf31414).cgColor, UIColor.init(hex: 0xf27200).cgColor, UIColor.init(hex: 0xffff00).cgColor, UIColor.init(hex: 0x2bee22).cgColor, UIColor.init(hex: 0x32a7eb).cgColor]
         layer_Gradient.locations = [0, 0.3, 0.5, 0.7, 1] //每个渐变颜色的终止位置，这些值必须是递增的，数组的长度和colors的长度最好一致
         //startPoint endPoint 分别表示渐变层的起始位置和终止位置，这两个点被定义在一个单元坐标空间，[0,0]表示左上角位置，[1,1]表示右下角位置，默认值分别是[.5,0] and [.5,1]；

@@ -134,7 +134,7 @@ extension YTTransitionAnimationViewController{
     func fadeAnimation() {
         
         let animation_Fade = CATransition()
-        animation_Fade.type = "fade"
+        animation_Fade.type = .fade
         animation_Fade.duration = 1.0
         view_Body.layer.add(animation_Fade, forKey: "fadeAnimation")
     }
@@ -142,7 +142,7 @@ extension YTTransitionAnimationViewController{
     func moveInAnimation() {
         
         let animation_MoveIn = CATransition()
-        animation_MoveIn.type = "moveIn"
+        animation_MoveIn.type = .moveIn
         animation_MoveIn.duration = 1.0
         view_Body.layer.add(animation_MoveIn, forKey: "moveInAnimation")
     }
@@ -150,8 +150,8 @@ extension YTTransitionAnimationViewController{
     func pushAnimation() {
         
         let animation_Push = CATransition()
-        animation_Push.type = "push"
-        animation_Push.subtype = "fromRight" /* the legal values are `fromLeft', `fromRight', `fromTop' and`fromBottom'. */
+        animation_Push.type = .push
+        animation_Push.subtype = .fromRight /* the legal values are `fromLeft', `fromRight', `fromTop' and`fromBottom'. */
         animation_Push.duration = 1.0
         view_Body.layer.add(animation_Push, forKey: "pushAnimation")
     }
@@ -159,8 +159,8 @@ extension YTTransitionAnimationViewController{
     func revealAnimation() {
         
         let animation_Reveal = CATransition()
-        animation_Reveal.type = "reveal"
-        animation_Reveal.subtype = "fromRight"
+        animation_Reveal.type = .reveal
+        animation_Reveal.subtype = .fromRight
         animation_Reveal.duration = 1.0
         view_Body.layer.add(animation_Reveal, forKey: "revealAnimation")
     }
@@ -168,8 +168,8 @@ extension YTTransitionAnimationViewController{
     func cubeAnimation() {
         
         let animation_Cube = CATransition()
-        animation_Cube.type = "cube"
-        animation_Cube.subtype = "fromRight"
+        animation_Cube.type = CATransitionType.init(rawValue: "cube")
+        animation_Cube.subtype = .fromRight
         animation_Cube.duration = 1.0
         view_Body.layer.add(animation_Cube, forKey: "cubeAnimation")
     }
@@ -177,8 +177,8 @@ extension YTTransitionAnimationViewController{
     func suckAnimation() {
         
         let animation_Suck = CATransition()
-        animation_Suck.type = "suckEffect"
-        animation_Suck.subtype = "fromRight"
+        animation_Suck.type = CATransitionType.init(rawValue: "suckEffect")
+        animation_Suck.subtype = .fromRight
         animation_Suck.duration = 1.0
         view_Body.layer.add(animation_Suck, forKey: "suckAnimation")
     }
@@ -186,8 +186,8 @@ extension YTTransitionAnimationViewController{
     func oglFlipAnimation() {
         
         let animation_OglFlip = CATransition()
-        animation_OglFlip.type = "oglFlip"
-        animation_OglFlip.subtype = "fromRight"
+        animation_OglFlip.type = CATransitionType.init(rawValue: "oglFlip")
+        animation_OglFlip.subtype = .fromRight
         animation_OglFlip.duration = 1.0
         view_Body.layer.add(animation_OglFlip, forKey: "oglFlipAnimation")
     }
@@ -195,8 +195,8 @@ extension YTTransitionAnimationViewController{
     func rippleAnimation() {
         
         let animation_Ripple = CATransition()
-        animation_Ripple.type = "rippleEffect"
-        animation_Ripple.subtype = "fromRight"
+        animation_Ripple.type = CATransitionType.init(rawValue: "rippleEffect")
+        animation_Ripple.subtype = .fromRight
         animation_Ripple.duration = 1.0
         view_Body.layer.add(animation_Ripple, forKey: "rippleAnimation")
     }
@@ -204,8 +204,8 @@ extension YTTransitionAnimationViewController{
     func curlAnimation() {
         
         let animation_Curl = CATransition()
-        animation_Curl.type = "pageCurl"
-        animation_Curl.subtype = "fromRight"
+        animation_Curl.type = CATransitionType.init(rawValue: "pageCurl")
+        animation_Curl.subtype = .fromRight
         animation_Curl.duration = 1.0
         view_Body.layer.add(animation_Curl, forKey: "curlAnimation")
     }
@@ -213,8 +213,8 @@ extension YTTransitionAnimationViewController{
     func unCurlAnimation() {
         
         let animation_UnCurl = CATransition()
-        animation_UnCurl.type = "pageUnCurl"
-        animation_UnCurl.subtype = "fromRight"
+        animation_UnCurl.type = CATransitionType.init(rawValue: "pageUnCurl")
+        animation_UnCurl.subtype = .fromRight
         animation_UnCurl.duration = 1.0
         view_Body.layer.add(animation_UnCurl, forKey: "unCurlAnimation")
     }
@@ -222,8 +222,8 @@ extension YTTransitionAnimationViewController{
     func caOpenAnimation() {
         
         let animation_CaOpen = CATransition()
-        animation_CaOpen.type = "cameraIrisHollowOpen"
-        animation_CaOpen.subtype = "fromRight"
+        animation_CaOpen.type = CATransitionType.init(rawValue: "cameraIrisHollowOpen")
+        animation_CaOpen.subtype = .fromRight
         animation_CaOpen.duration = 1.0
         view_Body.layer.add(animation_CaOpen, forKey: "caOpenAnimation")
     }
@@ -231,8 +231,8 @@ extension YTTransitionAnimationViewController{
     func caCloseAnimation() {
         
         let animation_CaClose = CATransition()
-        animation_CaClose.type = "cameraIrisHollowClose"
-        animation_CaClose.subtype = "fromRight"
+        animation_CaClose.type = CATransitionType.init(rawValue: "cameraIrisHollowClose")
+        animation_CaClose.subtype = .fromRight
         animation_CaClose.duration = 1.0
         view_Body.layer.add(animation_CaClose, forKey: "caCloseAnimation")
     }
