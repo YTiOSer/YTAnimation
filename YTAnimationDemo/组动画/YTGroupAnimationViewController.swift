@@ -96,7 +96,7 @@ extension YTGroupAnimationViewController{
         animation_Position.fromValue = CGPoint.init(x: margin_ViewMidPosition, y: kScreenH / 2)
         animation_Position.toValue = CGPoint.init(x: kScreenW / 2, y: kScreenH / 2)
         animation_Position.duration = 1.0
-        animation_Position.fillMode = "forwards" //只在前台
+        animation_Position.fillMode = CAMediaTimingFillMode.init(rawValue: "forwards")  //只在前台
         animation_Position.isRemovedOnCompletion = false //切出界面再回来动画不会停止
         animation_Position.beginTime = currentTime
         view_Body.layer.add(animation_Position, forKey: "positionAnimation")
@@ -105,7 +105,7 @@ extension YTGroupAnimationViewController{
         animation_Scale.fromValue = NSNumber.init(value: 0.7)
         animation_Scale.toValue = NSNumber.init(value: 2.0)
         animation_Scale.duration = 1.0
-        animation_Scale.fillMode = "forwards"
+        animation_Scale.fillMode = CAMediaTimingFillMode.init(rawValue: "forwards")
         animation_Scale.isRemovedOnCompletion = false
         animation_Scale.beginTime = currentTime + 1.0
         view_Body.layer.add(animation_Scale, forKey: "scaleAnimation")
@@ -113,7 +113,7 @@ extension YTGroupAnimationViewController{
         let animation_Rotate = CABasicAnimation.init(keyPath: "transform.rotation")
         animation_Rotate.toValue = NSNumber.init(value: Double.pi * 4)
         animation_Rotate.duration = 1.0
-        animation_Rotate.fillMode = "forwards"
+        animation_Rotate.fillMode = CAMediaTimingFillMode.init(rawValue: "forwards")
         animation_Rotate.isRemovedOnCompletion = false
         animation_Rotate.beginTime = currentTime + 2.0
         view_Body.layer.add(animation_Rotate, forKey: "rotateAnimation")

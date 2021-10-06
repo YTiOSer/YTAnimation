@@ -139,7 +139,7 @@ extension YTCombinationAnimationViewController{
         return array_Btn
     }
     
-    func dingDingBtnClick(btn: UIButton) {
+    @objc func dingDingBtnClick(btn: UIButton) {
         print("点击了 \(btn.titleLabel?.text ?? "")")
     }
     
@@ -165,7 +165,7 @@ extension YTCombinationAnimationViewController{
         }
     }
     
-    func dianZanBtnClick(btn: MCFireworksButton) {
+    @objc func dianZanBtnClick(btn: MCFireworksButton) {
         
         btn.isSelected = !btn.isSelected
         
@@ -225,7 +225,7 @@ extension YTCombinationAnimationViewController {
         animation.duration = 2
         animation.fromValue = 0
         animation.toValue = 1
-        animation.fillMode = "forwards"
+        animation.fillMode =    CAMediaTimingFillMode.init(rawValue: "forwards") 
         animation.isRemovedOnCompletion = false
         
         layer.add(animation, forKey: "strokeEndAnimation")
